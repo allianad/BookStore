@@ -10,17 +10,49 @@
             <objects>
                 <tableViewController id="405" sceneMemberID="viewController" customClass="BooksTableViewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="406">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="409">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="409" reuseIdentifier="Book" customClass="BookTableViewCell" rowHeight="123">
+                                <rect key="frame" x="0.0" y="28" width="414" height="123"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="409" id="410">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="409" id="410" customClass="tableViewCell">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="122"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1390" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="Name">
+                                            <rect key="frame" x="20" y="11" width="272" height="45"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1391" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="Author">
+                                            <rect key="frame" x="20" y="52" width="112" height="57"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1393" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="Publisher">
+                                            <rect key="frame" x="133" y="52" width="159" height="57"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1395" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="Year">
+                                            <rect key="frame" x="300" y="11" width="94" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" colorSpace="calibratedRGB" red="0.58431372549019611" green="0.062745098039215685" blue="0.12549019607843137" alpha="1"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bookNameLabel" destination="1390" id="name-outlet-1390"/>
+                                    <outlet property="bookYearLabel" destination="1395" id="name-outlet-1395"/>
+                                    <outlet property="bookPublisherLabel" destination="1393" id="name-outlet-1393"/>
+                                    <outlet property="bookAuthorLabel" destination="1391" id="name-outlet-1391"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
