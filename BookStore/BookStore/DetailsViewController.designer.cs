@@ -11,8 +11,8 @@ using UIKit;
 
 namespace BookStore
 {
-    [Register ("BooksTableViewController")]
-    partial class BooksTableViewController
+    [Register ("DetailsViewController")]
+    partial class DetailsViewController
     {
         void ReleaseDesignerOutlets ()
         {
