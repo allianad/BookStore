@@ -6,7 +6,7 @@ using UIKit;
 
 namespace BookStore
 {
-    public partial class BooksTableViewController : UITableViewController
+    partial class BooksTableViewController : UITableViewController
     {
         List<Book> bookList;
         public BooksTableViewController (IntPtr handle) : base (handle)
@@ -59,7 +59,7 @@ namespace BookStore
 
         public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
         {
-            if (segue.Identifier == "DetailsSeque")
+            if (segue.Identifier == "DetailsSegue")
             {
                 var navigationController = segue.DestinationViewController as DetailsViewController;
 

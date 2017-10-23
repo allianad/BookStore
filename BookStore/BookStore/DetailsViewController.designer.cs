@@ -14,8 +14,25 @@ namespace BookStore
     [Register ("DetailsViewController")]
     partial class DetailsViewController
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView bookImageView { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel bookLabel { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
+            if (bookImageView != null) {
+                bookImageView.Dispose ();
+                bookImageView = null;
+            }
+
+            if (bookLabel != null) {
+                bookLabel.Dispose ();
+                bookLabel = null;
+            }
         }
     }
 }
